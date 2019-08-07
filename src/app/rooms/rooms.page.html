@@ -1,0 +1,25 @@
+
+<ion-content >
+    <ion-card *ngFor = "let room of Rooms"  class="Card">
+       <img src="{{room.image}}" alt=""  class="Card">
+        <ion-card-content class="DivOne">
+          <div class="One">
+              <ion-card-title>
+                  {{room.RoomType}}
+                   </ion-card-title>
+                   <div >
+                       <p>
+                           {{room.Description}}
+                       </p>
+                   </div>
+          </div>
+
+          <div class="two">
+            <button (click)="Delete(room.key)">Delete Room</button>
+            <button (click)="Update(room.key)">Edit Room</button>
+          </div>
+         
+         
+        </ion-card-content>
+      </ion-card>
+</ion-content>
