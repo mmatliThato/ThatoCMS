@@ -5,7 +5,9 @@
         <ion-card-content class="DivOne">
           <div class="One">
               <ion-card-title>
-                  {{room.RoomType}}
+                  {{room.RoomType}}<br/>
+                  R
+                  {{room.Price}}.00
                    </ion-card-title>
                    <div >
                        <p>
@@ -15,8 +17,10 @@
           </div>
 
           <div class="two">
-            <button (click)="Delete(room.key)">Delete Room</button>
-            <button (click)="Update(room.key)">Edit Room</button>
+            <button (click)="Delete(room.key)" class="btn1">Delete Room</button>
+            <button (click)="Update(room.key)"  class="btn2">Edit Room</button>
+         
+           
           </div>
          
          

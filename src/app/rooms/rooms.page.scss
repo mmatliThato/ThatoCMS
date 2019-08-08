@@ -5,4 +5,24 @@
 .DivOne{
     display: flex;
    justify-content: space-around;
+   width: 100%;
+}
+
+.One{
+    width: 60%;
+}
+
+.btn1{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(204, 179, 179);
+    border-radius: 5px;
+}
+
+.btn2{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(204, 179, 179);
+    border-radius: 5px;
+    margin-left: 5px;
 }

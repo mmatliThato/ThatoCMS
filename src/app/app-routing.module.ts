@@ -2,24 +2,30 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
   },
   
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
-  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+
   { path: 'rooms', loadChildren: './rooms/rooms.module#RoomsPageModule' },
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
-  { path: 'feedback', loadChildren: './feedback/feedback.module#FeedbackPageModule' }
+
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'home', loadChildren: './home/home.module#HomePageModule'},
+  { path: 'me-nu', loadChildren: './me-nu/me-nu.module#MeNuPageModule' },
+  { path: 'add-room', loadChildren: './add-room/add-room.module#AddRoomPageModule' }
+
 ];
 
 @NgModule({
@@ -28,6 +34,8 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+ 
+}
 
 

@@ -1,0 +1,30 @@
+
+
+<ion-content>
+<div class="container">
+
+  <div class="One">
+<img src="{{room.pic}}" alt="" width="200" height="400">
+  </div>
+  <ion-input type="file" (change)="featuredPhotoSelected($event)"></ion-input>
+
+  <ion-list class="list" >
+    <ion-item >
+      <input type="text" [(ngModel)]="room.type" placeholder="Room type">
+    </ion-item>
+    <ion-item >
+        <input type="text" [(ngModel)]="room.price" placeholder="Price">
+      </ion-item>
+      <ion-item >
+          <input type="text" [(ngModel)]="room.description" placeholder="Description">
+        </ion-item>
+
+        <ion-item >
+            <input type="text" [(ngModel)]="room.location" placeholder="Location">
+          </ion-item>
+       
+
+  </ion-list>
+  <button (click)="addRoom({type: room.type})">Add</button>
+</div>
+</ion-content>

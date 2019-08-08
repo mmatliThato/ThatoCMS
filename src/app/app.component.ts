@@ -12,7 +12,9 @@ import * as firebase from 'firebase';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+ 
   public appPages = [
+  
     {
       title: 'Home',
       url: '/home',
@@ -28,12 +30,7 @@ export class AppComponent {
       url: '/rooms',
       icon: 'bed'
     },
-    {
-      title: 'feedback',
-      url: '/feedback',
-      icon: 'paper'
-    },
-   
+  
   ];
 
   constructor(
